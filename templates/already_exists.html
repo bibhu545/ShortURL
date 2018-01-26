@@ -1,0 +1,59 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="">
+      <title>ShortMe | URL Shortener and Link Management Platform</title>
+      <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://getbootstrap.com/docs/4.0/examples/cover/cover.css">
+      <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Monoton" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+   </head>
+   <body class="text-center">
+      <div class="main">
+         <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+               <div class="inner">
+                  <a href="/"><h3 class="masthead-brand" style="font-family: 'Monoton', cursive;">Short Me</h3></a>
+                  <nav class="nav nav-masthead justify-content-center">
+                     <a class="nav-link active" href="/">Home</a>
+                     <a class="nav-link" href="http://codesprint.in/portfolio.php">Contact</a>
+                  </nav>
+               </div>
+            </header>
+            <main role="main" class="inner cover">
+               <h2 class="cover-heading" style="font-family: 'Arima Madurai', cursive;">UNLEASH THE POWER OF THE LINK</h2>
+               <p class="lead" style="font-family: 'Arima Madurai', cursive;">Your link already exists</p>
+               <p class="lead">
+
+				<a href="http://localhost:8000/{{obj.shortcode}}" target="_blank">http://localhost:8000/{{obj.shortcode}}</a>
+				<br>
+				{% if obj.clicks %}
+				    
+					clicks : {{obj.clicks}}
+
+				{% endif %}
+				<br><br>
+				<a href="/" class="btn btn-primary">New +</a>
+               	
+               </p>
+            </main>
+            <footer class="mastfoot mt-auto">
+               <div class="inner">
+                  <p>&copy; Copyright &nbsp;&nbsp; <a target="_blank" href="http://codesprint.in/portfolio.php">BibhuRanjan@IIITBh</a></p>
+               </div>
+            </footer>
+         </div>
+         <!-- Bootstrap core JavaScript
+            ================================================== -->
+         <!-- Placed at the end of the document so the pages load faster -->
+         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+         <script src="https://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
+         <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+      </div>
+   </body>
+</html>
