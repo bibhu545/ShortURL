@@ -30,7 +30,7 @@ scikit-learn==0.19.1
 selenium==3.8.0
 six==1.11.0
 sklearn==0.0
-urllib3==1.22
+urllib3==1.24.2
 virtualenv==15.1.0
 whitenoise==3.3.1
 wikipedia==1.4.0
